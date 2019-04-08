@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 15
-  productGUID: 2ee7002fa7416af4ea695dfb07ce7263
+  productGUID: afed797f13d7444e5a0487edc286a536
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -591,6 +591,8 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Build: 1
+    Collab: 0
     UNet: 1
   luminIcon:
     m_Name: 
@@ -611,10 +613,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 22cb2f54-8c65-4939-870c-4886b6da3d82
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Jailbreak
+  organizationId: amandachanx
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
