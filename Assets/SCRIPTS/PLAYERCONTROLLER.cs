@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PLAYERCONTROLLER : MonoBehaviour
 {
@@ -16,11 +17,19 @@ public class PLAYERCONTROLLER : MonoBehaviour
     private float rotationY = 10f;
     private float rotationX = 0f;
 
+    //chnages by vishakha
+    public Text keycountText;
+    public Text lightercountText;     public Text winText;
+    private int keyCount;
+    private int lighterCount; 
+
     // Use this for initialization
     void Start()
     {
         speed = 5.0f;
         rbody = GetComponent<Rigidbody>();
+        keyCount = 0;    // changes by vishakha
+        lighterCount = 0; // changes by vishakha         SetCountText(); // changes by vishakha         winText.text = ""; // changes by vishakha
     }
 
     // Update is called once per frame
@@ -39,5 +48,25 @@ public class PLAYERCONTROLLER : MonoBehaviour
         rotationY += Input.GetAxis("Mouse Y") * rotationSpeed;
         rotationY = Mathf.Clamp(rotationY, minY, maxY);
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+
+        // changes by vishakha
+        float moveHorizontal = Input.GetAxis("Horizontal"); 
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        rbody.AddForce(movement * 10.0f);
     }
+
+    //changes by vishakha
+    void OnTriggerEnter(Collider other)     {         if (other.gameObject.CompareTag("Pick Up")) // for keys         {             other.gameObject.SetActive(false);             keyCount = keyCount + 1;             SetCountText();         }
+
+        if (other.gameObject.CompareTag("PickUp2"))   // for lighter
+        {
+            other.gameObject.SetActive(false);
+            lighterCount = lighterCount + 1;
+            SetCountText();
+        }     }
+    //changes by vishakha     void SetCountText()     {         keycountText.text = "Keys: " + keyCount.ToString();
+        lightercountText.text = "Lighters: " + lighterCount.ToString();         if (keyCount >= 4 && lighterCount>=4)         {             winText.text = "All Pickups Collected!";         }     } 
 }
