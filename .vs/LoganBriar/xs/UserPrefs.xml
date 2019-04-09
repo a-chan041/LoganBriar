@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{E9959428-DC62-A976-836F-6051037BA19D}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/Menu2.cs">
+    <Files>
+      <File FileName="Assets/SCRIPTS/PLAYERCONTROLLER.cs" Line="89" Column="53" />
+      <File FileName="../RollTheBall/Assets/Scripts/PlayerController.cs" Line="41" Column="28" />
+      <File FileName="Assets/SCRIPTS/Menu2.cs" Line="10" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
