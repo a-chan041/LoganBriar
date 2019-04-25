@@ -22,6 +22,9 @@ public class PLAYERCONTROLLER : MonoBehaviour
     public Text lightercountText;     public Text winText;
     private int keyCount;
     private int lighterCount; 
+    //for loading the canvas for level 1 finsh menu
+    public static bool GameComplete = false;
+    public GameObject levelFinishUI;
 
     // Use this for initialization
     void Start()
@@ -56,6 +59,7 @@ public class PLAYERCONTROLLER : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rbody.AddForce(movement * 10.0f);
+
     }
 
     //changes by vishakha
@@ -68,5 +72,17 @@ public class PLAYERCONTROLLER : MonoBehaviour
             SetCountText();
         }     }
     //changes by vishakha     void SetCountText()     {         keycountText.text = "Keys: " + keyCount.ToString();
-        lightercountText.text = "Lighters: " + lighterCount.ToString();         if (keyCount >= 4 && lighterCount>=4)         {             winText.text = "All Pickups Collected!";         }     } 
+        lightercountText.text = "Lighters: " + lighterCount.ToString();         if (keyCount >= 4 && lighterCount>=4)         {             //winText.text = "All Pickups Collected!";
+            GameComplete = true;
+        }     }
+
+    void Update()
+    {
+            if (GameComplete)
+            {
+                levelFinishUI.SetActive(true);
+                Time.timeScale = 0f;
+                GameComplete = false;
+            }
+    }
 }
