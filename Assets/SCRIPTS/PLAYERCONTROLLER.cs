@@ -52,7 +52,7 @@ public class PLAYERCONTROLLER : MonoBehaviour
         rotationY = Mathf.Clamp(rotationY, minY, maxY);
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
 
-        // changes by vishakha
+         //changes by vishakha
         float moveHorizontal = Input.GetAxis("Horizontal"); 
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -72,17 +72,21 @@ public class PLAYERCONTROLLER : MonoBehaviour
             SetCountText();
         }     }
     //changes by vishakha     void SetCountText()     {         keycountText.text = "Keys: " + keyCount.ToString();
-        lightercountText.text = "Lighters: " + lighterCount.ToString();         if (keyCount >= 4 && lighterCount>=4)         {             //winText.text = "All Pickups Collected!";
+        lightercountText.text = "Lighters: " + lighterCount.ToString();         if (keyCount >= 1 && lighterCount>=1)         {
+            //winText.text = "All Pickups Collected!"
             GameComplete = true;
         }     }
 
     void Update()
     {
-            if (GameComplete)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                levelFinishUI.SetActive(true);
-                Time.timeScale = 0f;
-                GameComplete = false;
+                if (GameComplete)
+                {
+                    levelFinishUI.SetActive(true);
+                    Time.timeScale = 0f;
+                    GameComplete = false;
+                }
             }
     }
 }

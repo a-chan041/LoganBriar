@@ -14,10 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameStory.unity
     guid: 4f896cd5bd0744d95bb95fdf48b818c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/prison.unity
     guid: 06ed89b9d13c8644580c63573915df32
   - enabled: 1
-    path: Assets/Scenes/Sewer.unity
+    path: Assets/Scenes/Prison Scene.unity
+    guid: f83656e671e16244aa692b0fde1ba361
+  - enabled: 1
+    path: Assets/Scenes/sewer.unity
     guid: 2afb9bdcd8407480bbdc07bccddeb236
   m_configObjects: {}

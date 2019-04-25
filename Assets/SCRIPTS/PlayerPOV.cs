@@ -10,10 +10,11 @@ public class PlayerPOV : MonoBehaviour
 
     float xAxisClamp = 0.0f;
 
-    void Awake() // as soon as game starts
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
+
+    //void Awake() // as soon as game starts
+    //{
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //}
 
     void Update()
     {

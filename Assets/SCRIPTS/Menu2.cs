@@ -16,8 +16,6 @@ public class Menu2 : MonoBehaviour
     //    }
     //}
 
-    public static bool GameIsPaused = false;
-    public GameObject levelFinishUI;
 
     public void LoadLevel1()
     {
@@ -37,7 +35,8 @@ public class Menu2 : MonoBehaviour
     {
         //Time.timeScale = 1f;
         //SceneManager.LoadScene("MainMenu");
-        Application.LoadLevel(0);  // main menu
+        //Application.LoadLevel(0);  // main menu
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Quit()
