@@ -618,6 +618,7 @@
     <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
     <Compile Include="Assets\SCRIPTS\MainMenu.cs" />
     <Compile Include="Assets\SCRIPTS\Menu2.cs" />
+    <Compile Include="Assets\SCRIPTS\PauseMenu.cs" />
     <Compile Include="Assets\SCRIPTS\PLAYERCONTROLLER.cs" />
     <Compile Include="Assets\SCRIPTS\PlayerMove.cs" />
     <Compile Include="Assets\SCRIPTS\PlayerPOV.cs" />
