@@ -19,9 +19,11 @@ public class PLAYERCONTROLLER : MonoBehaviour
 
     //chnages by vishakha
     public Text keycountText;
-    public Text lightercountText;     public Text winText;
+    public Text flashlightCountText; 
     private int keyCount;
-    private int lighterCount; 
+    private int flashlightCount;
+    //int keyCount = Singelton.SharedInstance.keyCount;
+    //int flashlightCount = Singelton.SharedInstance.flashlightCount; 
     //for loading the canvas for level 1 finsh menu
     public static bool GameComplete = false;
     public GameObject levelFinishUI;
@@ -32,7 +34,7 @@ public class PLAYERCONTROLLER : MonoBehaviour
         speed = 5.0f;
         rbody = GetComponent<Rigidbody>();
         keyCount = 0;    // changes by vishakha
-        lighterCount = 0; // changes by vishakha         SetCountText(); // changes by vishakha         winText.text = ""; // changes by vishakha
+        flashlightCount = 0; // changes by vishakha         SetCountText(); // changes by vishakha
     }
 
     // Update is called once per frame
@@ -68,24 +70,24 @@ public class PLAYERCONTROLLER : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp2"))   // for lighter
         {
             other.gameObject.SetActive(false);
-            lighterCount = lighterCount + 1;
+            flashlightCount = flashlightCount + 1;
             SetCountText();
         }     }
     //changes by vishakha     void SetCountText()     {         keycountText.text = "Keys: " + keyCount.ToString();
-        lightercountText.text = "Lighters: " + lighterCount.ToString();         if (keyCount >= 1 && lighterCount>=1)         {
-            //winText.text = "All Pickups Collected!"
+        flashlightCountText.text = "FlashLight: " + flashlightCount.ToString();         if (keyCount >= 1 && flashlightCount>=1)         {
             GameComplete = true;
         }     }
 
+     //changes by vishakha
     void Update()
     {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.M))
             {
                 if (GameComplete)
                 {
-                    levelFinishUI.SetActive(true);
-                    Time.timeScale = 0f;
-                    GameComplete = false;
+                 levelFinishUI.SetActive(true);
+                 Time.timeScale = 0f;
+                 GameComplete = false;
                 }
             }
     }

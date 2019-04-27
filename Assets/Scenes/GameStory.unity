@@ -1066,7 +1066,7 @@ MonoBehaviour:
   indentLevel: 0
   _sceneName:
     stringRef: {fileID: 0}
-    stringVal: prison
+    stringVal: Prison Scene
   loadingImage: {fileID: 0}
   sceneNameOLD: 
 --- !u!114 &1040467603
@@ -1511,7 +1511,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500437055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d53a4b3348ba644a3874558c8a5bfbb6, type: 3}
   m_Name: 

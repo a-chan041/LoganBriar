@@ -616,6 +616,10 @@
     <Compile Include="Assets\FungusExamples\FirstPerson\Scripts\SimpleMouseLook.cs" />
     <Compile Include="Assets\FungusExamples\FungusLua\Bindings\CustomScript.cs" />
     <Compile Include="Assets\FungusExamples\MonoBehEvents\SpriteColorChangeFromFungusMouseEvent.cs" />
+    <Compile Include="Assets\SCRIPTS\DoorOpen.cs" />
+    <Compile Include="Assets\SCRIPTS\Flashlight.cs" />
+    <Compile Include="Assets\SCRIPTS\GameEndScript.cs" />
+    <Compile Include="Assets\SCRIPTS\InteractScript.cs" />
     <Compile Include="Assets\SCRIPTS\MainMenu.cs" />
     <Compile Include="Assets\SCRIPTS\Menu2.cs" />
     <Compile Include="Assets\SCRIPTS\PauseMenu.cs" />
