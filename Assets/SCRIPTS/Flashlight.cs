@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    Light light;
+    new Light light;
     // Update is called once per frame
     void Update()
     {

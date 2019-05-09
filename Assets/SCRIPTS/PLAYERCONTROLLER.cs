@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PLAYERCONTROLLER : MonoBehaviour
@@ -17,6 +18,7 @@ public class PLAYERCONTROLLER : MonoBehaviour
     private float rotationY = 10f;
     private float rotationX = 0f;
 
+    public AudioSource audio;
     //chnages by vishakha
     public Text keycountText;
     public Text flashlightCountText; 
@@ -27,6 +29,7 @@ public class PLAYERCONTROLLER : MonoBehaviour
     //for loading the canvas for level 1 finsh menu
     public static bool GameComplete = false;
     public GameObject levelFinishUI;
+    public static Vector3 playerPos;
 
     // Use this for initialization
     void Start()
@@ -35,7 +38,20 @@ public class PLAYERCONTROLLER : MonoBehaviour
         rbody = GetComponent<Rigidbody>();
         keyCount = 0;    // changes by vishakha
         flashlightCount = 0; // changes by vishakha         SetCountText(); // changes by vishakha
+        audio = GetComponent<AudioSource>();
+        StartCoroutine(TrackPlayer());
+
     }
+
+    IEnumerator TrackPlayer()
+    {
+        while (true)
+        {
+            playerPos = gameObject.transform.position;
+            yield return null;
+        }
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
@@ -62,6 +78,16 @@ public class PLAYERCONTROLLER : MonoBehaviour
 
         rbody.AddForce(movement * 10.0f);
 
+        // steps by Clay
+        if ((movement.x != 0 || movement.z != 0) && audio.isPlaying == false)
+        {
+            audio.Play();
+        }
+        else if (movement.x == 0 && movement.z == 0)
+        {
+            audio.Stop();
+        }
+
     }
 
     //changes by vishakha
@@ -72,6 +98,11 @@ public class PLAYERCONTROLLER : MonoBehaviour
             other.gameObject.SetActive(false);
             flashlightCount = flashlightCount + 1;
             SetCountText();
+        }
+
+        if (other.gameObject.CompareTag("Caught"))
+        {
+            SceneManager.LoadScene("Menu");
         }     }
     //changes by vishakha     void SetCountText()     {         keycountText.text = "Keys: " + keyCount.ToString();
         flashlightCountText.text = "FlashLight: " + flashlightCount.ToString();         if (keyCount >= 1 && flashlightCount>=1)         {

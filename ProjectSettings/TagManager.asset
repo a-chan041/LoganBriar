@@ -8,6 +8,8 @@ TagManager:
   - PickUp2
   - Door
   - Exit
+  - Ladder
+  - Caught
   layers:
   - Default
   - TransparentFX

@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{5B9FF267-005F-A3BF-219E-FEAE2D8C894F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/GameEndScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SCRIPTS/PLAYERCONTROLLER.cs">
     <Files>
-      <File FileName="Assets/SCRIPTS/MainMenu.cs" Line="11" Column="6" />
-      <File FileName="Assets/SCRIPTS/PLAYERCONTROLLER.cs" Line="101" Column="14" />
-      <File FileName="Assets/SCRIPTS/Menu2.cs" Line="46" Column="28" />
-      <File FileName="Assets/SCRIPTS/PlayerPOV.cs" Line="13" Column="1" />
-      <File FileName="Assets/SCRIPTS/PlayerMove.cs" Line="46" Column="1" />
-      <File FileName="Assets/SCRIPTS/PauseMenu.cs" Line="14" Column="18" />
-      <File FileName="Assets/SCRIPTS/Flashlight.cs" Line="25" Column="1" />
-      <File FileName="Assets/SCRIPTS/InteractScript.cs" Line="28" Column="1" />
-      <File FileName="Assets/SCRIPTS/DoorOpen.cs" Line="20" Column="9" />
-      <File FileName="Assets/SCRIPTS/GameEndScript.cs" Line="12" Column="1" />
+      <File FileName="Assets/SCRIPTS/MainMenu.cs" Line="10" Column="78" />
+      <File FileName="Assets/SCRIPTS/PLAYERCONTROLLER.cs" Line="115" Column="44" />
+      <File FileName="Assets/SCRIPTS/Menu2.cs" Line="39" Column="40" />
+      <File FileName="Assets/SCRIPTS/PlayerMove.cs" Line="42" Column="10" />
+      <File FileName="Assets/SCRIPTS/InteractScript.cs" Line="24" Column="10" />
+      <File FileName="Assets/SCRIPTS/DoorOpen.cs" Line="20" Column="1" />
+      <File FileName="Assets/SCRIPTS/GameEndScript.cs" Line="16" Column="10" />
+      <File FileName="Assets/SCRIPTS/Flashlight.cs" Line="9" Column="18" />
+      <File FileName="Assets/SCRIPTS/Patrol_Chase.cs" Line="1" Column="1" />
+      <File FileName="Assets/AllStarCharacterLibray/Scripts/CharacterDemoController.cs" Line="185" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

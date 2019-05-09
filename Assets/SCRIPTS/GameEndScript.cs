@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameEndScript : MonoBehaviour
 {
     public GameObject gameFinishUI;
-
     // Update is called once per frame
     void Update()
     {
